@@ -2,11 +2,14 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link :to="{name:'about'}">About</router-link>
+      <router-link :to="{name:'about'}">About</router-link>|
+      <router-link :to="{name:'store'}">子组件之间传值</router-link>|
+      <router-link to="/name_view">/name_view</router-link>
     </div>
     <router-view/>
     <router-view name ='top'/>
     <router-view name ='foot'/>
+    <router-view name ='email'/>
   </div>
 </template>
 

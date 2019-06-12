@@ -26,6 +26,11 @@ export default [{
   props: true
 },
 {
+  path: '/store',
+  name: 'store',
+  component: () => import('@/views/store.vue')
+},
+{
   path: '/parent',
   component: () => import('@/views/parent.vue'),
   children: [{
@@ -38,7 +43,8 @@ export default [{
   components: {
     default: () => import('@/views/child.vue'),
     top: () => import('@/views/Home.vue'),
-    foot: () => import('@/views/About.vue')
+    foot: () => import('@/views/About.vue'),
+    email: () => import('@/views/email.vue')
   }
 }, {
   path: '/main',

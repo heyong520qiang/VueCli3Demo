@@ -5,7 +5,7 @@ const resolve = dir => path.join(__dirname, dir)
 const BASE_URL = process.env.NODE_ENV === 'production' ? '/dist/' : '/'
 module.exports = {
   lintOnSave: false,
-  baseUrl: BASE_URL,
+  publicPath: BASE_URL,
   chainWebpack: config => {
     config.resolve.alias
       .set('@', resolve('src'))
@@ -13,6 +13,6 @@ module.exports = {
   },
   productionSourceMap: false,
   devServer: {// 跨域代理设置
-    proxy: 'http://localhost:4000'
+    proxy: 'http://www.baidu.com'
   }
 }
