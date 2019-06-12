@@ -1,11 +1,18 @@
 <template>
   <div class="arge">
-    {{$route.params.name}}
+    {{name}}
   </div>
 </template>
 
 <script>
 export default {
+  name: 'argu',
+  props: {
+    name: {
+      type: String,
+      default: 'bit'
+    }
+  },
   data () {
     return {}
   },

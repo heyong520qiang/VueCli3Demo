@@ -1,5 +1,22 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h3>{{parm}}</h3>
+    <button @click="handle">click</button>
   </div>
 </template>
+<script>
+export default {
+  name: 'about',
+  props: {
+    parm: {
+      type: String,
+      default: 'apple'
+    }
+  },
+  methods: {
+    handle () {
+      console.log(this.parm)
+    }
+  }
+}
+</script>

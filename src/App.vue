@@ -5,6 +5,8 @@
       <router-link :to="{name:'about'}">About</router-link>
     </div>
     <router-view/>
+    <router-view name ='top'/>
+    <router-view name ='foot'/>
   </div>
 </template>
 

@@ -2,7 +2,7 @@ const path = require('path')
 
 const resolve = dir => path.join(__dirname, dir)
 
-const BASE_URL = process.env.NODE_ENV === 'production' ? '/projectName/' : '/'
+const BASE_URL = process.env.NODE_ENV === 'production' ? '/dist/' : '/'
 module.exports = {
   lintOnSave: false,
   baseUrl: BASE_URL,
