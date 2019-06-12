@@ -9,7 +9,6 @@ import user from './module/user'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  namespaced: true,
   state,
   getters,
   mutations,
