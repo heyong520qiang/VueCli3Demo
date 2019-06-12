@@ -1,4 +1,6 @@
-const state = {}
+const state = {
+  userName: 'bit'
+}
 const mutations = {}
 const actions = {}
 
