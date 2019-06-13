@@ -30,6 +30,20 @@ export default {
     handleInput (val) {
       this.iptValue = val
     },
+    changeAppName () {
+      // this.$store.commit('SET_APPNAME','mmm')
+      // this.$store.commit('SET_APPNAME',{
+      //   appName:'mmm'
+      //   })
+      // this.$store.commit({
+      //   type: "SET_APPNAME",
+      //   appName: "mmm"
+      // });
+      // this.$store.commit('SET_APP_VERSION');
+      // this.SET_APP_VERSION(),
+      // this.SET_APPNAME({ appName: 'wqwqwq' }),
+      // this.SET_USER_NAME('NEWUsername')
+    },
     changeAppName_action () {
       this.updated()
     }
