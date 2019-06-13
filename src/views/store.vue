@@ -40,9 +40,9 @@ export default {
       //   appName: "mmm"
       // });
       // this.$store.commit('SET_APP_VERSION');
-      // this.SET_APP_VERSION(),
-      // this.SET_APPNAME({ appName: 'wqwqwq' }),
-      // this.SET_USER_NAME('NEWUsername')
+      this.SET_APP_VERSION()
+      this.SET_APPNAME({ appName: 'wqwqwq' })
+      this.SET_USER_NAME('NEWUsername')
     },
     changeAppName_action () {
       this.updated()
