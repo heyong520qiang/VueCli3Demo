@@ -5,6 +5,7 @@
     <button @click="handleClick('back')">返回上一页</button>
     <button @click="handleClick('push')">name_view页面</button>
     <button @click="handleClick('replace')">about页面</button>
+    <button @click="getInfo">请求数据</button>
   </div>
 </template>
 
@@ -18,6 +19,11 @@ export default {
     food: {
       type: String,
       default: 'apple'
+    }
+  },
+  data () {
+    return {
+
     }
   },
   methods: {
@@ -39,6 +45,9 @@ export default {
           // }
         }) // 指定路径
       }
+    },
+    getInfo () {
+      //
     }
   },
   components: {
