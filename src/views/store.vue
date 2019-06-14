@@ -1,8 +1,8 @@
 <template>
   <div class="store">
-    <ainput @input='handleInput'></ainput>
-    <!-- <p>{{iptValue}}</p> -->
-    <a-show :content="iptValue"></a-show>
+    <ainput v-model="stateValue"></ainput>
+    <p>{{stateValue}}</p>
+    <a-show :content="stateValue"></a-show>
     {{appNameAdd}}
     {{userName}}
     <button @click="changeAppName">changeAppName</button>
@@ -25,7 +25,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['SET_APP_VERSION', 'SET_APPNAME', 'SET_USER_NAME']),
+    ...mapMutations(['SET_APP_VERSION', 'SET_APPNAME', 'SET_USER_NAME', 'SET_STATEVALUE']),
     ...mapActions(['updated']),
     handleInput (val) {
       this.iptValue = val
@@ -42,7 +42,8 @@ export default {
       // this.$store.commit('SET_APP_VERSION');
       this.SET_APP_VERSION()
       this.SET_APPNAME({ appName: 'wqwqwq' })
-      this.SET_USER_NAME('NEWUsername')
+      // this.SET_USER_NAME('NEWUsername01')
+      this.$store.state.user.userName = '0002'
     },
     changeAppName_action () {
       this.updated()
@@ -59,6 +60,14 @@ export default {
       userName: state => state.user.userName,
       appversion: state => state.appversion
     }),
+    stateValue: {
+      get () {
+        return this.$store.state.stateValue
+      },
+      set (val) {
+        this.SET_STATEVALUE(val)
+      }
+    },
     ...mapGetters(['appNameAdd'])
     // appNameAdd() {
     //   return this.$store.getters.appNameAdd;

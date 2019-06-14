@@ -5,11 +5,12 @@ import getters from './getters'
 import mutations from './mutations'
 import actions from './actions'
 import user from './module/user'
-import saveInLocal from './plugin/saveInLocal'
-
+// import saveInLocal from './plugin/saveInLocal'
+import createPersistedState from 'vuex-persistedstate'// VUEX持久化插件
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  strict: process.env.NODE_ENV === 'devlopment',
   state,
   getters,
   mutations,
@@ -17,5 +18,7 @@ export default new Vuex.Store({
   modules: {
     user
   },
-  plugins: [saveInLocal]
+  plugins: [createPersistedState({
+    storage: window.sessionStorage
+  })]
 })
