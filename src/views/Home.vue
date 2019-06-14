@@ -12,7 +12,7 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '_c/HelloWorld.vue'
-
+import { getUserInfo } from '@/api/user'
 export default {
   name: 'home',
   props: {
@@ -48,6 +48,9 @@ export default {
     },
     getInfo () {
       //
+      getUserInfo({ paramName: 'param' }).then(res => {
+        console.log(res)
+      })
     }
   },
   components: {
