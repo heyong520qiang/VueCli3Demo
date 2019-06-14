@@ -13,6 +13,6 @@ module.exports = {
   },
   productionSourceMap: false,
   devServer: {// 跨域代理设置
-    proxy: 'http://www.baidu.com'
+    // proxy: 'http://www.baidu.com'
   }
 }
